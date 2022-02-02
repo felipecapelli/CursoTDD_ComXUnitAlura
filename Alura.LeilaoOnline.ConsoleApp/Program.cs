@@ -101,5 +101,35 @@ namespace Alura.LeilaoOnline.ConsoleApp
 
      */
 
+    /*
+        Referencias da segunda aula
+
+        Classes de Equivalência - técnica para identificação de testes relevantes:
+            https://en.wikipedia.org/wiki/Equivalence_partitioning
+
+        Análise de Fronteira - outra técnica:
+            https://en.wikipedia.org/wiki/Boundary-value_analysis
+
+        Definição de Product Owner
+            https://www.scrum.org/resources/what-is-a-product-owner
+
+        Diferença entre [Fact] e [Theory]
+            https://xunit.net/docs/getting-started/netfx/visual-studio#write-first-theory
+
+        Nomenclatura de testes
+            https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices#best-practices
+
+            https://docs.microsoft.com/pt-br/dotnet/standard/modern-web-apps-azure-architecture/test-asp-net-core-mvc-apps#test-naming
+
+       ****************************************** IMPORTANTE ******************************************
+
+        No vídeo Teorizando com xUnit você deve ter ficado se perguntando o seguinte: e se eu tiver dados de entrada mais complexos do que um simples double? E se quiser parametrizar objetos de entrada? O que fazer?
+
+        Para isso o xUnit possui outras duas anotações, [MemberData] e [ClassData], onde você pode construir os dados de entrada usando membros da própria classe de teste ou então uma classe específica para isso.
+
+        Veja mais detalhes nesse artigo (em inglês): https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/
+     
+     */
+
 
 }
