@@ -71,7 +71,7 @@ namespace Alura.LeilaoOnline.ConsoleApp
     }
 
     /* 
-        Referencias mencionadas na aula:
+        Referencias mencionadas na aula 1:
         Definição de Teste
             http://softwaretestingfundamentals.com/definition-of-test/
 
@@ -102,7 +102,7 @@ namespace Alura.LeilaoOnline.ConsoleApp
      */
 
     /*
-        Referencias da segunda aula
+        Referencias da segunda aula 2
 
         Classes de Equivalência - técnica para identificação de testes relevantes:
             https://en.wikipedia.org/wiki/Equivalence_partitioning
@@ -129,6 +129,26 @@ namespace Alura.LeilaoOnline.ConsoleApp
 
         Veja mais detalhes nesse artigo (em inglês): https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/
      
+     */
+
+    /*
+         Referencias da segunda aula 3 
+     
+        Testes de regressão
+        http://softwaretestingfundamentals.com/regression-testing/
+
+    Intro a Métodos Ágeis na Alura
+        https://cursos.alura.com.br/course/introducao-aos-metodos-ageis
+
+    Livro TDD By Example, de Kent Beck
+        https://www.amazon.com.br/Test-Driven-Development-Kent-Beck/dp/0321146530/
+
+    Livro sobre TDD na Casa do Código
+        https://www.casadocodigo.com.br/products/livro-tdd-dotnet
+
+    Testes de métodos privados
+        https://docs.microsoft.com/pt-br/dotnet/core/testing/unit-testing-best-practices#validate-private-methods-by-unit-testing-public-methods 
+
      */
 
 
