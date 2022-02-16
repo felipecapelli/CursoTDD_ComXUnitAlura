@@ -151,5 +151,22 @@ namespace Alura.LeilaoOnline.ConsoleApp
 
      */
 
+    /*
+     Referencias da segunda aula 4
+
+     Diferenças entre os frameworks ao testar exceções
+
+        https://xunit.net/docs/comparisons
+
+     Visual Studio tem uma ferramenta de cobertura de código, mas infelizmente apenas nas suas versões pagas.
+
+        https://docs.microsoft.com/en-us/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested
+
+      Esse artigo do Martin Fowler debate o real propósito da cobertura de código, que em sua opinião (na minha também!) deveria ser para encontrar partes não testadas do seu sistema ao invés de ser uma métrica utilizada em contratos e objetivos do time.
+
+        https://www.martinfowler.com/bliki/TestCoverage.html
+     
+     */
+
 
 }
