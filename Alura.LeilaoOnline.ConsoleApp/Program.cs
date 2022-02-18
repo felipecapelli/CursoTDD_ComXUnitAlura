@@ -25,7 +25,8 @@ namespace Alura.LeilaoOnline.ConsoleApp
         private static void LeilaoComVariosLances()
         {
             //Anrranje (Given) - cenário
-            var leilao = new Leilao("Van Gogh");
+            var modalidade = new MaiorValor();
+            var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano", leilao);
             var maria = new Interessada("Maria", leilao);
 
@@ -47,7 +48,8 @@ namespace Alura.LeilaoOnline.ConsoleApp
         private static void LeilaoComApenasUmLance()
         {
             //Anrranje (Given) - cenário
-            var leilao = new Leilao("Van Gogh");
+            var modalidade = new MaiorValor();
+            var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano", leilao);
 
             leilao.RecebeLance(fulano, 8001);
@@ -165,6 +167,19 @@ namespace Alura.LeilaoOnline.ConsoleApp
       Esse artigo do Martin Fowler debate o real propósito da cobertura de código, que em sua opinião (na minha também!) deveria ser para encontrar partes não testadas do seu sistema ao invés de ser uma métrica utilizada em contratos e objetivos do time.
 
         https://www.martinfowler.com/bliki/TestCoverage.html
+     
+     */
+
+    /*
+    Consulte as referências usadas nessa aula.
+
+    Design OO, Interfaces e Implementação
+        https://en.wikipedia.org/wiki/Object-oriented_design
+
+    Princípios de Design: SOLID
+        https://en.wikipedia.org/wiki/SOLID
+
+    Talk de Michael Feathers sobre como testes melhoram o design
      
      */
 

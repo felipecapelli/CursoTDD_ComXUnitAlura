@@ -6,11 +6,46 @@ namespace Alura.LeilaoOnline.Tests
 {
     public class LeilaoTerminaPregao
     {
+        [Theory]
+        [InlineData(1200, 1250, new double[] { 800, 1150, 1400, 1250 })]
+        public void RetornaValorSuperiorMaisProximoDadoLeilaoNessaModalidade(
+            double valorDestino,
+            double valorEsperado,
+            double[] ofertas)
+        {
+            //Arranje
+            IModalidadeAvaliacao modalidade = 
+                new OfertaSuperiorMaisProxima(valorDestino);
+            var leilao = new Leilao("Van Gogh", modalidade);
+            var fulano = new Interessada("Fulano", leilao);
+            var maria = new Interessada("Maria", leilao);
+            leilao.IniciaPregao();
+
+            for(int i = 0; i < ofertas.Length; i++)
+            {
+                if((i % 2 == 0))
+                {
+                    leilao.RecebeLance(fulano, ofertas[i]);
+                }
+                else
+                {
+                    leilao.RecebeLance(maria, ofertas[i]);
+                }
+            }
+
+            //Act
+            leilao.TerminaPregao();
+
+            //Assert
+            Assert.Equal(valorEsperado, leilao.Ganhador.Valor);
+        }
+
         [Fact]
         public void LancaInvalidOperationExceptionDadoPregaoNaoIniciado()
         {
             //Arranje - cenario
-            var leilao = new Leilao("Van gogh");
+            var modalidade = new MaiorValor();
+            var leilao = new Leilao("Van Gogh", modalidade);
 
             var excecaoObtida = Assert.Throws<System.InvalidOperationException>(
                 //Act - método sob teste
@@ -39,7 +74,8 @@ namespace Alura.LeilaoOnline.Tests
         public static void RetornaZeroLeilaoSemLances()
         {
             //Anrranje (Given) - cenário
-            var leilao = new Leilao("Van Gogh");
+            var modalidade = new MaiorValor();
+            var leilao = new Leilao("Van Gogh", modalidade);
             leilao.IniciaPregao();
 
             //Act (When) - método sob teste
@@ -60,7 +96,8 @@ namespace Alura.LeilaoOnline.Tests
         {
             //Anrranje (Given) - cenário
             //Dado Leilao Com Pelo Menos Um Lance
-            var leilao = new Leilao("Van Gogh");
+            var modalidade = new MaiorValor();
+            var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano", leilao);
             var maria = new Interessada("Maria", leilao);
 
